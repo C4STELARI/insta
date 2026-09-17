@@ -1,21 +1,439 @@
-header{
-    background-color: white;
-    padding: 12px 25px;
-    border: 2px  solid black;
-    border-width: 1px 0 1px 0;
-    flex-direction: row;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+/* TOPO */
+
+.topo {
+    height: 60px;
+    border-bottom: 1px solid #ddd;
 
     display: flex;
-    flex-direction: row; 
-    align-items: left; 
-    justify-content: left;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
 }
 
-.topo_esquerdo{
-    /* display: flex; */
-    /* align-items: right; */
+.topo h1 {
+    font-size: 22px;
+    font-weight: 600;
 }
 
-.fotodoperfil{
-    border-radius: 80px;
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.botoes button {
+    border: none;
+    background: #4d5df5;
+    color: white;
+
+    padding: 9px 18px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botoes a {
+    color: #3044d8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* PERFIL */
+
+main {
+    max-width: 700px;
+    margin: auto;
+}
+
+.perfil {
+    display: flex;
+    gap: 55px;
+    padding: 62px 25px 35px;
+}
+
+.foto-perfil {
+    min-width: 165px;
+    height: 165px;
+
+    border-radius: 50%;
+
+    padding: 5px;
+
+    background: linear-gradient(
+        135deg,
+        #ffb000,
+        #ff0069,
+        #c800ff
+    );
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: #e00067;
+
+    border: 5px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo span {
+    color: white;
+    font-size: 62px;
+    font-weight: bold;
+    letter-spacing: -15px;
+    margin-left: -12px;
+}
+
+.informacoes {
+    flex: 1;
+}
+
+.linha-principal {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    margin-bottom: 18px;
+}
+
+.linha-principal h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.numeros {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.numeros strong:nth-of-type(2) {
+    margin-left: 35px;
+}
+
+.categoria {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eee;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.informacoes p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.site {
+    color: #1455a0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* STORIES */
+
+.stories {
+    display: flex;
+    gap: 28px;
+
+    padding: 0 25px 35px;
+
+    overflow: hidden;
+}
+
+.story {
+    min-width: 105px;
+    text-align: center;
+}
+
+.story-icon {
+    width: 88px;
+    height: 88px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    border: 4px solid #e1e4e8;
+    outline: 3px solid #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.preto {
+    background: #15151b;
+}
+
+.rosa {
+    background: #ec0068;
+}
+
+.laranja {
+    background: #fa4c12;
+}
+
+.story p {
+    font-size: 12px;
+    margin-top: 13px;
+}
+
+/* MENU */
+
+.menu {
+    height: 55px;
+
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #eee;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-item {
+    width: 33.33%;
+    text-align: center;
+
+    color: #999;
+    font-size: 27px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item.ativo {
+    color: #111;
+    border-bottom: 2px solid #111;
+}
+
+/* POSTS */
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.post {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+/* PRIMEIRO POST */
+
+.post1 {
+    height: 100%;
+    padding: 15px 12px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #630031,
+            #f00078
+        );
+}
+
+.post1 h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.agenda {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    border-bottom: 1px solid rgba(255,255,255,.4);
+
+    padding: 7px 0;
+
+    font-size: 8px;
+}
+
+.agenda div {
+    width: 32px;
+    text-align: center;
+}
+
+.agenda strong {
+    display: block;
+    font-size: 15px;
+}
+
+.agenda p {
+    font-size: 8px;
+}
+
+/* SEGUNDO POST */
+
+.post2 {
+    background: linear-gradient(
+        135deg,
+        #ec0068,
+        #087bea
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.post2 h2 {
+    font-size: 21px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.post2 p {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.post2 strong {
+    font-size: 17px;
+}
+
+/* TERCEIRO POST */
+
+.post3 {
+    background:
+        linear-gradient(
+            rgba(220, 0, 85, .75),
+            rgba(220, 0, 85, .75)
+        ),
+        url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    padding: 15px;
+}
+
+.texto-post {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.texto-post span {
+    background: white;
+    color: #222;
+
+    width: fit-content;
+
+    padding: 3px 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.texto-post p {
+    margin-top: 18px;
+
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.05;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    .perfil {
+        gap: 25px;
+        padding: 40px 15px 30px;
+    }
+
+    .foto-perfil {
+        min-width: 100px;
+        height: 100px;
+    }
+
+    .logo span {
+        font-size: 40px;
+    }
+
+    .linha-principal {
+        display: block;
+    }
+
+    .numeros {
+        margin-top: 12px;
+    }
+
+    .numeros strong:nth-of-type(2) {
+        margin-left: 15px;
+    }
+
+    .stories {
+        gap: 12px;
+        padding-left: 15px;
+    }
+
+    .story {
+        min-width: 80px;
+    }
+
+    .story-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .post2 h2 {
+        font-size: 16px;
+    }
+
+    .post2 strong {
+        font-size: 13px;
+    }
+
+    .texto-post span {
+        font-size: 10px;
+    }
+
+    .texto-post p {
+        font-size: 13px;
+    }
 }
