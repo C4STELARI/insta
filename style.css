@@ -32,6 +32,8 @@
     height: 150px;
     width: 800px;
     background-color: rgb(167, 5, 29);
+    display: flex;
+    overflow: hidden;
 }
 
 #feed{
@@ -101,4 +103,19 @@
     background-size: 12px;
     background-image: url("link-icon.png");
     display: inline-block;
+}
+
+.destaque{
+    width: 120px;
+    height: 150px;
+    background-color: aqua;
+    padding: 10px;
+    box-sizing: border-box;
+
+    p{
+       margin-top: 0;
+       text-align: center;
+       font-weight: 600; 
+    }
+
 }
