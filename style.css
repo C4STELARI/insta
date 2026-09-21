@@ -12,9 +12,37 @@
     flex-direction: row;
 }
 
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.botoes button {
+    border: none;
+    background: #4d5df5;
+    color: white;
+
+    padding: 9px 18px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botoes a {
+    color: #3044d8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
 #afastar{
-    margin-left: 530px;
+    margin-left: 490px;
     vertical-align: middle;
+
+    .button{
+        background-color: blue;
+    }
 }
 
 #afastar2{
@@ -26,20 +54,6 @@
     height: 300px;
     background-color: rgb(6, 119, 119) ;
     display: flex;
-}
-
-#destaques {
-    height: 150px;
-    width: 800px;
-    background-color: rgb(167, 5, 29);
-    display: flex;
-    overflow: hidden;
-}
-
-#feed{
-    height: 1000px;
-    width: 800px;
-    background-color: rgb(219, 131, 15);
 }
 
 #fotodeperfil{
@@ -105,12 +119,24 @@
     display: inline-block;
 }
 
+#destaques {
+    height: 150px;
+    width: 800px;
+    background-color: rgb(167, 5, 29);
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
 .destaque{
     width: 120px;
     height: 150px;
     background-color: aqua;
     padding: 10px;
-    box-sizing: border-box;
+    
+    img{
+        border-radius: 50%;
+    }
 
     p{
        margin-top: 0;
@@ -118,4 +144,14 @@
        font-weight: 600; 
     }
 
+}
+
+#feed{
+    height: 1000px;
+    width: 800px;
+    background-color: rgb(219, 131, 15);
+    display: flex;
+    /* sem o wrap, ele acaba isno pra proxima linha */
+    flex-wrap: wrap;
+    
 }
