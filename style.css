@@ -1,11 +1,12 @@
 #conteudo {
     width: 800px;
     height: 1000px;
-    background-color: rgb(255, 230, 0);
+    /* background-color: rgb(255, 230, 0); */
     margin: 0 auto;
+    /* font-family: Arial, Helvetica, sans-serif;   */
 }
 
-#topo{
+#topo {
     background-color: white;
     border-bottom: 1px solid black;
     display: flex;
@@ -36,30 +37,30 @@
     font-size: 14px;
 }
 
-#afastar{
+#afastar {
     margin-left: 490px;
     vertical-align: middle;
 
-    .button{
+    .button {
         background-color: blue;
     }
 }
 
-#afastar2{
+#afastar2 {
     word-spacing: 10px;
 }
 
 #cabecalho {
     width: 800px;
     height: 300px;
-    background-color: rgb(6, 119, 119) ;
+    /* background-color: rgb(6, 119, 119); */
     display: flex;
 }
 
-#fotodeperfil{
+#fotodeperfil {
     width: 300px;
     height: 300px;
-    background-color: darkmagenta;
+    /* background-color: darkmagenta; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,23 +70,30 @@
 
 }
 
-#foto{
+#foto {
     border-radius: 100px;
 }
 
-#textodeperfil{
+#textodeperfil {
     width: 500px;
     height: 300px;
-    background-color: darkseagreen;
+    /* background-color: darkseagreen; */
     padding: 20px 50px;
-    box-sizing: border-box; /* deixa no tamanho setado q queria com meu padding */
+    box-sizing: border-box;
+    /* deixa no tamanho setado q queria com meu padding */
 
-    a{
+    h2{
+        font-family: "Lacquer", system-ui;
+        font-weight: 400;
+        font-style: normal;
+
+    }
+    a {
         text-decoration: none;
     }
 }
 
-#span-seguindo{
+#span-seguindo {
     font-weight: bold;
     margin-left: 50px;
 }
@@ -94,23 +102,23 @@
     margin: 0px;
 }
 
-#threads{
+#threads {
     margin: 11px 0px 6px 0px;
 }
 
 #pill {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     border-radius: 20px;
     padding: 5px 10px;
-    font-size: 12px;    
+    font-size: 12px;
     margin: 16px 0px;
 }
 
-#pill img{
+#pill img {
     vertical-align: middle;
 }
 
-#icone-link{
+#icone-link {
     display: block;
     height: 12px;
     width: 12px;
@@ -122,36 +130,59 @@
 #destaques {
     height: 150px;
     width: 800px;
-    background-color: rgb(167, 5, 29);
+    /* background-color: rgb(167, 5, 29); */
     display: flex;
     overflow: hidden;
     overflow-x: auto;
 }
 
-.destaque{
+.destaque {
     width: 120px;
     height: 150px;
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 10px;
-    
-    img{
+
+    img {
         border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
     }
 
-    p{
-       margin-top: 0;
-       text-align: center;
-       font-weight: 600; 
+    p {
+        margin-top: 0;
+        text-align: center;
+        font-weight: 600;
     }
 
 }
 
-#feed{
+#feed {
     height: 1000px;
     width: 800px;
-    background-color: rgb(219, 131, 15);
+    /* background-color: rgb(219, 131, 15); */
     display: flex;
-    /* sem o wrap, ele acaba isno pra proxima linha */
+    overflow: hidden;
+    overflow-y: scroll;
     flex-wrap: wrap;
-    
+    justify-content: space-between;
+
+    .post{
+        /* height: 100%;
+        width: 100%; */
+        
+    }
+    img{
+        width: 256px;
+        height: 300px;
+        object-fit: contain;
+        /* o cover faz com a pag inteira sem distorcer */
+    }
+    /* grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px; */
+    /* justify-content: center; */
+    /* align-content: flex-start;  */
+    /* display: grid;
+    /sem o wrap, ele acaba isno pra proxima linha 
+    flex-wrap: wrap; */
 }
